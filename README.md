@@ -1,3 +1,3 @@
 # Proyecto de componentes
 
-Segundo ejercicio del curso de Flutter
+Ejercicios del curso de Flutter
