@@ -1,8 +1,52 @@
-import 'package:flutter/material.dart';
+import 'dart:async';
+import 'dart:convert';
+import 'dart:io';
 
-class AvatarPage extends StatelessWidget {
+import 'package:componentes/src/objects/post.dart';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+
+class AvatarPage extends StatefulWidget {
+  @override
+  _AvatarPageState createState() => _AvatarPageState();
+}
+
+class _AvatarPageState extends State<AvatarPage> {
   @override
   Widget build(BuildContext context) {
+    /*
+    final enlace = 'https://api.pexels.com/v1/search?query=people';
+
+    var client = http.Client();
+    try {
+      final res = await client.get(Uri.parse(enlace));
+      print(res);
+    } finally {
+      client.close();
+    }
+
+    Future<Post> fetchPost() async {
+      final response = await http.get(
+        Uri.parse(enlace),
+        headers: {
+          HttpHeaders.authorizationHeader:
+              "563492ad6f917000010000016972d45ff6d84f05b4d7a55f787deb10"
+        },
+      );
+
+      if (response.statusCode == 200) {
+        // Si el servidor devuelve una repuesta OK, parseamos el JSON
+        return json.decode(response.body);
+        // return Post.fromJson(json_f);
+      } else {
+        // Si esta respuesta no fue OK, lanza un error.
+        throw Exception('Failed to load post');
+      }
+    }
+
+    fetchPost();
+    */
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Avatar Page'),
